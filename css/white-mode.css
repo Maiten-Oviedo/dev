@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=PT+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+.toggle-content-active {
+    transition: all 1s ease;
+    background-color: #081b29;
+    box-shadow: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle-active {
+    transition: all .5s ease;
+    background-color: #ededed;
+    box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #b1b1b1;
+}
+
+/*-------------------------------------------BLACK MODE---------------------------------------*/
+
+.body-active {
+    background-color: #ededed;
+    color: #000;
+    font-weight: 400;
+}
+
+/*---------------------------------------------HEADER----------------------------------------*/
+
+.header-active {
+    transition: all 1s ease;
+    background: #ededed;
+}
+
+.logo-active {
+    color: #081b29;
+}
+
+.menu-active {
+    color: #081b29;
+    font-weight: 500;
+}
+
+.btn-active {
+    transition: all 1s ease;
+    color: #081b29;
+}
+
+
+.second-text-active::before {
+    background-color: #ededed;
+    border-left: 2px solid #081b29;
+}
+
+/*----------------------------------------HOME----------------------------------------------*/
+
+.first-text-active {
+    color: #081b29;
+}
+
+/*----------------------------------------SECTION INTERESTS-----------------------------------*/
+
+li.li-active {
+    color: #000;
+}
+
+/*--------------------------------------------CONTACT-----------------------------------------*/
+
+.title-active {
+    color: #ededed;
+}
+
+.label-active {
+    color: #ededed;
+}
+
+.input-active {
+    transition: all 1s ease;
+    background: #ededed;
+}
+
+a.network-active {
+    color: #00abf0;
+}
+
+@media screen and (width < 980px) {
+    /*HEADER*/
+    .navbar-active {
+        background-color: #ededed;
+    }
+}

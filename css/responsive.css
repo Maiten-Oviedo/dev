@@ -1,0 +1,321 @@
+@media screen and (width < 980px) {
+    
+    .disabled {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    /*HEADER*/
+
+    .navbar {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px 2rem 16px 4rem;
+        background: #011b29;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        gap: 2em;
+    }
+
+    .navbar-list-content {
+        height: 100%;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu-item {
+        font-size: 1.5em;
+    }
+
+    .abrir-menu {
+        background: transparent;
+        color: #ededed;
+        font-size: 2.5em;
+        border: none;
+    }
+
+    .cerrar-menu {
+        font-size: 3em;
+    }
+
+    .navbar.visible {
+        transition: all .5s ease;
+        opacity: 1;
+        visibility: visible;
+        animation: slideInRight .5s ease;
+    }
+
+    .navbar.invisible {
+        transition: all .5s ease;
+        right: -252px;
+    }
+
+    
+    /*HOME*/
+    #home {
+        height: 100vh;
+        display: flex;
+        padding: 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-content {
+        padding: .5em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content p{
+        margin: 1em 0;
+        text-align: center;
+    }
+    
+    .btn-box {
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 250px;
+        height: 333px;
+        border-radius: 15px;
+    }
+
+    .home-content h1 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    /*ABOUT*/
+
+    #about {
+        height: auto;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .about-personal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-interests{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*PORTFOLIO*/
+
+    #portfolio{
+        height: auto;
+    }
+
+    /*CONTACT*/
+    #contact{
+        height: auto;
+    }
+
+    
+
+}
+
+
+@media screen and (width < 740px) {
+
+    /*HOME*/
+
+    .overlay-content {
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .text-desktop{
+        display: none;
+    }
+
+    .text-mobile-content {
+        display: block;
+        overflow: hidden;
+    }
+
+    .text-mobile{
+        position: relative;
+        font-weight: 500;
+        color: #be813a;
+        font-size: 2em;
+    }
+    
+    .first-text {
+        color: #fff;
+    }
+
+    .second-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #081b29;
+        border-left: 2px solid #fff;
+        animation: animate 3s steps(7) infinite;
+    }
+
+    /*SKILLS*/
+
+    #skills{ 
+        height: auto;
+    }
+
+    .skills-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .skills-content ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .technical-skills,
+    .profesional-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    
+}
+
+@media screen and (width < 650px){
+    /*HOME*/
+
+    .home-content h1 {
+        font-size: 2em;
+    }
+
+    .home-content h3 {
+        font-size: 1.5em;
+    }
+
+    .home-content p {
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 50%;
+        height: 50%;
+    }
+    
+    /*CONTACT*/
+
+    #form {
+        width: 80%;
+    }
+}
+
+@media screen and (width < 450px){
+
+    html {
+        overflow-x: hidden;
+    }
+
+    /*HOME*/
+
+    .btn-box{
+        padding-top: 2em;
+    }
+
+    .home-content h1 {
+        white-space: normal;
+    }
+
+    .home-content h3 {
+        display: none;
+    }
+
+    .home-networks {
+        bottom: 1em;
+    }
+
+    .home-networks a {
+        color: #ededed;
+    }
+
+    .home-img img {
+        width: 60%;
+        height: 60%;
+    }
+
+    /*ABOUT*/
+
+    .about-content h3 {
+        text-align: center;
+    }
+
+    .interests {
+        justify-content: center;
+    }
+}
+
+/*KEYFRAMES*/
+@keyframes animate {
+    40%, 60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      transform: translate3d(100%, 0, 0);
+    }
+}
