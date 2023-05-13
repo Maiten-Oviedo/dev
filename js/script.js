@@ -84,6 +84,9 @@ textLoad();
 setInterval (textLoad, 12000);
 
 /*-----------------EMAIL----------------*/ 
+
+const btn = document.getElementById('button');
+
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
